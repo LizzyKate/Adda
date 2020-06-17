@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.__space{
+    padding: 2rem 5rem 2rem 5rem;
+}
+.__diff, .__spec{
+    font-family: 'Roboto';
+    font-size:16px;
+    font-weight: bolder;
+}
+.__shift{
+    margin-left: 10rem;
+}
+.__parent{
+    font-family: 'Roboto';
+    font-size: 12px;
+}
+.__parent:focus{
+    box-shadow: none !important;
+}
+.__profile{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.__ban{
+    height: 140px;
+}
+.__adjust{
+    top: 90px;
+    left: 85px;
+}
+.__profiling{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+.__dimbel h6, .__dimbel h5{
+    font-family: 'Roboto';
+    font-weight: bolder;
+}
+.__dimbel p{
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: lighter;
+}
+.__line{
+    width: 29px;
+    height: 1px;
+    border: 1px solid #dc4734;
+}
+.__join{
+    font-family: 'Roboto' !important;
+    font-weight: bolder !important;
+    font-size: 14px !important;
+}
+@media screen and (max-width: 1200px){
+    .__ban{
+        height: 120px;
+    }
+    .__adjust{
+        left: 70px;
+    }
+}
