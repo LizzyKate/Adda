@@ -20,3 +20,21 @@
 .__dimbel p{
     color: #666666;
 }
+.__write{
+    background-color: #80808036 !important;
+    color: #80808036 !important;
+}
+.__mycustom button{
+    background-color:#dc4734 ;
+    color: #ffffff;
+}
+.__mycustom button:hover{
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+.__attach{
+    color: #444444!important;
+}
+.__like{
+    color: #444444b3;
+}

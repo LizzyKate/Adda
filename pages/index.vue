@@ -6,7 +6,7 @@
           <favourite />
         </div>
         <div class="col-6">
-          2 of 3 (wider)
+          <posts />
         </div>
         <div class="col">
           <notifications />
@@ -19,11 +19,13 @@
 <script>
 import favourite from '~/components/favourite/root'
 import notifications from '~/components/Notifications/root'
+import posts from '~/components/Posts/root'
 
 export default {
   components: {
     favourite,
-    notifications
+    notifications,
+    posts
   }
 }
 </script>

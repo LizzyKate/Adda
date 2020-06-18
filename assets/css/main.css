@@ -51,11 +51,37 @@
     height: 1px;
     border: 1px solid #dc4734;
 }
-.__join{
+.__join, .__attach, .__like{
     font-family: 'Roboto' !important;
     font-weight: bolder !important;
-    font-size: 14px !important;
+    font-size: 15px !important;
 }
+.__evenly{
+    justify-content: space-evenly;
+}
+.__write{
+    padding: 1.7rem;
+    font-family: 'Roboto';
+}
+.__write:focus{
+    outline: none !important;
+    z-index: 0 !important;
+    box-shadow: none !important;
+    border-color: none !important;
+}
+.__mycustom {
+    top: 8px;
+    right: 10px;
+}
+.__mycustom button {
+    border-radius: 23px;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.__pic, .__vid{
+    width: 250px;
+}
+
 @media screen and (max-width: 1200px){
     .__ban{
         height: 120px;

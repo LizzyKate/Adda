@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      page: 'Page You May Like',
+      page: 'Friends Zone',
       like: [
         {
           image: 'profile-small-33.jpg',
