@@ -15,12 +15,12 @@
               <input
                 id="validationDefaultUsername"
                 type="text"
-                class="form-control rounded-pill w-100 position-relative __write"
+                class="form-control rounded-pill w-100 p-4 position-relative __write"
                 placeholder="Say Something"
                 required
               />
               <div class="position-absolute __mycustom">
-                <button type="submit" vlaue="submit" class="btn py-2 px-4">
+                <button type="submit" vlaue="submit" class="btn px-4">
                   SHARE
                 </button>
               </div>

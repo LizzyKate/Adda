@@ -26,60 +26,15 @@ export default {
   data() {
     return {
       text: 'Latest Top News',
-      page: 'Page You May Like',
-      like: [
-        {
-          image: 'profile-small-33.jpg',
-          task: 'Adventure',
-          event: 'Travel The World',
-          liked: false
-        },
-        {
-          image: 'profile-small-30.jpg',
-          task: 'Food',
-          event: 'Foodcort Nirala',
-          liked: false
-        },
-        {
-          image: 'profile-small-5.jpg',
-          task: 'Drama',
-          event: 'Rolin Theitar',
-          liked: false
-        },
-        {
-          image: 'profile-small-29.jpg',
-          task: 'Fitness',
-          event: 'Active Mind',
-          liked: false
-        }
-      ],
-      News: [
-        {
-          image: 'profile-small-28.jpg',
-          news: 'Any one can join with us if you want',
-          time: '2 Min Ago'
-        },
-        {
-          image: 'profile-small-31.jpg',
-          news: 'Any one can join with us if you want',
-          time: '20 Min Ago'
-        },
-        {
-          image: 'profile-small-27.jpg',
-          news: 'Any one can join with us if you want',
-          time: '30 Min Ago'
-        },
-        {
-          image: 'profile-small-34.jpg',
-          news: 'Any one can join with us if you want',
-          time: '40 Min Ago'
-        },
-        {
-          image: 'profile-small-32.jpg',
-          news: 'Any one can join with us if you want',
-          time: '39 Min Ago'
-        }
-      ]
+      page: 'Page You May Like'
+    }
+  },
+  computed: {
+    like() {
+      return this.$store.state.page.like
+    },
+    News() {
+      return this.$store.state.News.News
     }
   }
 }

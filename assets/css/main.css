@@ -60,17 +60,16 @@
     justify-content: space-evenly;
 }
 .__write{
-    padding: 1.7rem;
     font-family: 'Roboto';
 }
 .__write:focus{
     outline: none !important;
     z-index: 0 !important;
     box-shadow: none !important;
-    border-color: none !important;
+    border: none !important;
 }
 .__mycustom {
-    top: 8px;
+    top: 5px;
     right: 10px;
 }
 .__mycustom button {

@@ -52,10 +52,9 @@ export default {
       required: true
     }
   },
-
   methods: {
     change(i) {
-      this.choose[i].liked = !this.choose[i].liked
+      this.$store.commit('page/pick', i)
     }
   }
 }

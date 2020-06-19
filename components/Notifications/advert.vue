@@ -13,8 +13,12 @@ export default {
   },
   data() {
     return {
-      text: 'Advertizement',
-      News: []
+      text: 'Advertizement'
+    }
+  },
+  computed: {
+    News() {
+      return this.$store.state.News.Advert
     }
   }
 }
