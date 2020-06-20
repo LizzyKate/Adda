@@ -77,10 +77,26 @@
     font-family: 'Roboto';
     font-weight: bold;
 }
-.__pic, .__vid{
+/* .__pic, .__vid{
     width: 250px;
-}
+} */
+.__pic {
+    display: flex;
+    overflow: scroll;
+    scroll-padding: 0;
+  }
 
+.__pic::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .__pic img,
+  .__pic iframe {
+    width: 171px;
+    padding: 10px;
+    height: 200px;
+    object-fit: fill;
+}
 @media screen and (max-width: 1200px){
     .__ban{
         height: 120px;

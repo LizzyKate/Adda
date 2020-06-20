@@ -32,15 +32,19 @@
               {{ write.body }}
             </p>
           </div>
-          <div class="p-3 bd-highlight">
-            <div class="d-flex flex-row bd-highlight">
-              <div class=" bd-highlight __pic">
-                <!-- <img :src="/img/ + write.images" class="w-100" alt="" /> -->
-              </div>
-              <div class=" bd-highlight __vid">
-                <!-- <iframe :src="write.videos" class="w-100"> </iframe> -->
-              </div>
-            </div>
+          <div class="p-2 bd-highlight __pic">
+            <img
+              v-for="(img, index) in write.images"
+              :key="index"
+              :src="img"
+              alt=""
+              :class="[write.images.length === 1 ? 'width-100' : 'width-60']"
+            />
+            <!-- <client-only>
+                  <vue-core-video-player
+                    src="https://www.w3schools.com/tags/movie.mp4"
+                  ></vue-core-video-player>
+                </client-only> -->
           </div>
           <div class="p-3 bd-highlight">
             <div
@@ -117,4 +121,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.width-100 {
+  width: 100% !important;
+}
+
+.width-60 {
+  max-width: 60%;
+}
+</style>
