@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     change(i) {
-      this.$store.commit('page/pick', i)
+      this.$store.commit('page/pick', { type: this.page, index: i })
     }
   }
 }

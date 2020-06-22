@@ -1,6 +1,6 @@
 <template>
   <div class="position-relative">
-    <bar class="position-sticky w-100" />
+    <bar />
     <nuxt />
   </div>
 </template>

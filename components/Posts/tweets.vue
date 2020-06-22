@@ -33,18 +33,16 @@
             </p>
           </div>
           <div class="p-2 bd-highlight __pic">
-            <img
-              v-for="(img, index) in write.images"
+            <div
+              v-for="(media, index) in write.media"
               :key="index"
-              :src="img"
-              alt=""
-              :class="[write.images.length === 1 ? 'width-100' : 'width-60']"
-            />
-            <!-- <client-only>
-                  <vue-core-video-player
-                    src="https://www.w3schools.com/tags/movie.mp4"
-                  ></vue-core-video-player>
-                </client-only> -->
+              :class="[write.media.length === 1 ? 'width-100' : 'width-60']"
+            >
+              <img v-if="media.type === 'image'" :src="media.url" alt="" />
+              <no-ssr v-else>
+                <video :src="media.url" controls></video>
+              </no-ssr>
+            </div>
           </div>
           <div class="p-3 bd-highlight">
             <div

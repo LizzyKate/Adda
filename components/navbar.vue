@@ -4,7 +4,8 @@
       toggleable="lg"
       type="dark"
       variant="primary"
-      class="navbar-horizontal __space"
+      class="navbar-horizontal __space "
+      fixed="top"
     >
       <div class="col">
         <ul class="navbar-nav justify-content-around">

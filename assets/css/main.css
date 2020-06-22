@@ -91,11 +91,12 @@
   }
   
   .__pic img,
-  .__pic iframe {
-    width: 171px;
+  .__pic video {
+    width: 100%;
+    min-width: 220px;
     padding: 10px;
     height: 200px;
-    object-fit: fill;
+    object-fit: contain;
 }
 @media screen and (max-width: 1200px){
     .__ban{

@@ -55,9 +55,10 @@ export const state = () => ({
 
 export const mutations = {
   pick(state, payload) {
-    state.like[payload].liked = !state.like[payload].liked
-  },
-  select(state, payload) {
-    state.friends[payload].liked = !state.friends[payload].liked
+    if (payload.type === 'Friends Zone') {
+      state.friends[payload.index].liked = !state.friends[payload.index].liked
+    } else {
+      state.like[payload.index].liked = !state.like[payload.index].liked
+    }
   }
 }
