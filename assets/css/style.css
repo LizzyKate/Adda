@@ -1,7 +1,7 @@
 .__space, .__dimbel{
     background-color: #ffffff !important;
 }
-.__diff, .__heart{
+.__diff, .__heart, .__send i{
     color: #dc4734 !important;
 }
 .__spec, .__dimbel h6, .__join{
@@ -17,7 +17,7 @@
 .__ban{
     background-color: #444444b8;
 }
-.__dimbel p{
+.__dimbel p, .__your, .__sub i{
     color: #666666;
 }
 .__write{
@@ -37,4 +37,7 @@
 }
 .__like{
     color: #444444b3;
+}
+.__sub, .__send{
+    background-color: transparent !important;
 }

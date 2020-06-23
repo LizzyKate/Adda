@@ -2,8 +2,13 @@
     margin: 0;
     box-sizing: border-box;
 }
+.__stop{
+    padding-top: 6rem;
+}
 .__space{
-    padding: 2rem 5rem 2rem 5rem;
+    padding: 1rem 3rem 1rem 3rem;
+    position: fixed;
+    top: 0;
 }
 .__diff, .__spec{
     font-family: 'Roboto';
@@ -41,7 +46,7 @@
     font-family: 'Roboto';
     font-weight: bolder;
 }
-.__dimbel p{
+.__dimbel p, .__your, .__our{
     font-family: 'Roboto';
     font-size: 12px;
     font-weight: lighter;
@@ -98,11 +103,48 @@
     height: 200px;
     object-fit: contain;
 }
+.__buzz{
+    margin-left: 3rem;
+}
+.__search{
+    height: 70px;
+    box-shadow:  0px 3px 6px #00000029
+}
+.__your:focus{
+    box-shadow: none !important;
+}
+.__arrow{
+    height: 70px; 
+    box-shadow:  0px 3px 6px #00000029
+}
+.__shake{
+    margin-right: auto;
+    margin-left: auto;
+}
+.__our:focus{
+    margin-top: -10px !important;
+    box-shadow: none !important;
+}
 @media screen and (max-width: 1200px){
+    .__space1{
+        margin-right: 10rem;
+    }
     .__ban{
         height: 120px;
     }
     .__adjust{
         left: 70px;
+    }
+    .__push{
+        flex-basis: 0;
+        flex-grow: 1;
+        min-width: 0;
+        max-width: 100%;
+        position: relative;
+        width: 100%;
+    }
+    .__shake{
+        margin-left:1rem;
+        margin-right: 1rem;
     }
 }

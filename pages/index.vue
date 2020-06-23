@@ -1,6 +1,6 @@
 <template>
   <div class=" __divide">
-    <div class="container pt-5 px-0">
+    <div class="container __stop px-0">
       <div class="row">
         <div class="col">
           <favourite />
