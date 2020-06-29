@@ -41,3 +41,6 @@
 .__sub, .__send{
     background-color: transparent !important;
 }
+.__less i{
+    color: #333333ba;
+}

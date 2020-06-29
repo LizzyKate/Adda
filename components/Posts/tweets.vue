@@ -39,9 +39,9 @@
               :class="[write.media.length === 1 ? 'width-100' : 'width-60']"
             >
               <img v-if="media.type === 'image'" :src="media.url" alt="" />
-              <no-ssr v-else>
+              <client-only v-else>
                 <video :src="media.url" controls></video>
-              </no-ssr>
+              </client-only>
             </div>
           </div>
           <div class="p-3 bd-highlight">
