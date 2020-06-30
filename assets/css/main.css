@@ -151,6 +151,19 @@
   top: 30px;
   left: 30px;
 }
+.__up {
+  bottom: 90px;
+  right: 40px;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+.__up i {
+  font-size: 40px;
+}
+.dropdown-toggle:after {
+  content: none;
+}
 @media screen and (max-width: 1200px) {
   .__space1 {
     margin-right: 10rem;

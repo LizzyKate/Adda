@@ -14,9 +14,14 @@
               Home
             </a>
           </li>
-          <li v-for="(spec, i) in list" :key="i" class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon __spec " href="#">
+              Message
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link nav-link-icon __spec" href="#">
-              {{ spec }}
+              Notification
             </a>
           </li>
         </ul>
@@ -61,9 +66,7 @@
 <script>
 export default {
   data() {
-    return {
-      list: ['Message', 'Notification']
-    }
+    return {}
   }
 }
 </script>

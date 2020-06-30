@@ -1,46 +1,63 @@
-.__space, .__dimbel{
-    background-color: #ffffff !important;
+.__space,
+.__dimbel {
+  background-color: #ffffff !important;
 }
-.__diff, .__heart, .__send i{
-    color: #dc4734 !important;
+.__diff,
+.__heart,
+.__send i {
+  color: #dc4734 !important;
 }
-.__spec, .__dimbel h6, .__join{
-    color: #333333 !important;
+.__spec,
+.__dimbel h6,
+.__join {
+  color: #333333 !important;
 }
-.__parent{
-    background-color: transparent !important;
-    color: #000000;
+.__spec:hover {
+  color: #dc4734 !important;
 }
-.__divide{
-    background-color: #44444438;
+.__parent {
+  background-color: transparent !important;
+  color: #000000;
 }
-.__ban{
-    background-color: #444444b8;
+.__divide {
+  background-color: #44444438;
 }
-.__dimbel p, .__your, .__sub i{
-    color: #666666;
+.__ban {
+  background-color: #444444b8;
 }
-.__write{
-    background-color: #80808036 !important;
-    color: #80808036 !important;
+.__dimbel p,
+.__your,
+.__sub i {
+  color: #666666;
 }
-.__mycustom button{
-    background-color:#dc4734 ;
-    color: #ffffff;
+.__write {
+  background-color: #80808036 !important;
+  color: #80808036 !important;
 }
-.__mycustom button:hover{
-    background-color: #000000 !important;
-    color: #ffffff !important;
+.__mycustom button {
+  background-color: #dc4734;
+  color: #ffffff;
 }
-.__attach{
-    color: #444444!important;
+.__mycustom button:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
-.__like{
-    color: #444444b3;
+.__attach {
+  color: #444444 !important;
 }
-.__sub, .__send{
-    background-color: transparent !important;
+.__like {
+  color: #444444b3;
 }
-.__less i{
-    color: #333333ba;
+.__sub,
+.__send {
+  background-color: transparent !important;
+}
+.__less i {
+  color: #333333ba;
+}
+.__up {
+  background-color: #dc4734;
+}
+.__up i {
+  color: #f0f8ffb5;
 }
