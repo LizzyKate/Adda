@@ -15,14 +15,18 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon __spec " href="#">
+            <div class="nav-link nav-link-icon __spec " @click="pop()">
               Message
-            </a>
+            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon __spec" href="#">
+            <div
+              class="nav-link nav-link-icon __spec"
+              href="#"
+              @click="notify()"
+            >
               Notification
-            </a>
+            </div>
           </li>
         </ul>
       </div>
@@ -60,13 +64,39 @@
         <!-- </b-navbar-nav> -->
       </b-collapse>
     </b-navbar>
+    <div>
+      <message v-show="message" />
+    </div>
+    <div>
+      <notifications v-show="notifications" />
+    </div>
   </div>
 </template>
 
 <script>
+import message from './Dropdowns/message'
+import notifications from './Dropdowns/notification'
+
 export default {
+  components: {
+    message,
+    notifications
+  },
   data() {
-    return {}
+    return {
+      message: false,
+      notifications: false
+    }
+  },
+  methods: {
+    pop() {
+      this.message = !this.message
+      this.notifications = false
+    },
+    notify() {
+      this.notifications = !this.notifications
+      this.message = false
+    }
   }
 }
 </script>

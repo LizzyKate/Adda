@@ -1,4 +1,6 @@
-.__space,
+.__space {
+  background-color: #ffffffc2 !important;
+}
 .__dimbel {
   background-color: #ffffff !important;
 }
@@ -9,10 +11,16 @@
 }
 .__spec,
 .__dimbel h6,
-.__join {
+.__join,
+.__recent p,
+.__milli,
+.__many,
+.__click {
   color: #333333 !important;
 }
-.__spec:hover {
+.__spec:hover,
+.__group p:hover,
+.__milli:hover {
   color: #dc4734 !important;
 }
 .__parent {
@@ -27,7 +35,8 @@
 }
 .__dimbel p,
 .__your,
-.__sub i {
+.__sub i,
+.__new p {
   color: #666666;
 }
 .__write {
@@ -60,4 +69,15 @@
 }
 .__up i {
   color: #f0f8ffb5;
+}
+.__message,
+.__notify {
+  background-color: #ffffff;
+}
+.__group p,
+.__date p {
+  color: #444444c7;
+}
+.__set i {
+  color: #3333338c;
 }

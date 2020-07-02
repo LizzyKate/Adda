@@ -50,7 +50,7 @@ export default {
   data() {
     return {
       currentOffset: 0,
-      windowSize: 7,
+      windowSize: 6.5,
       paginationFactor: 40,
       animation: 'animate__animated animate__slideInRight'
     }
