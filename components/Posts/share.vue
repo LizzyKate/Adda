@@ -9,7 +9,7 @@
         />
       </div>
       <div class="col-8 p-0">
-        <form>
+        <div>
           <div class="">
             <div class="input-group">
               <input
@@ -18,15 +18,34 @@
                 class="form-control rounded-pill w-100 p-4 position-relative __write"
                 placeholder="Say Something"
                 required
+                @focus="clickbutton"
               />
               <div class="position-absolute __mycustom">
-                <button type="submit" vlaue="submit" class="btn px-4">
-                  SHARE
-                </button>
+                <b-button ref="button" v-b-modal.modal-1 class="px-4">
+                  Share
+                </b-button>
+
+                <b-modal id="modal-1" title="Share Your Mood" class="__mood">
+                  <b-form-textarea
+                    id="textarea"
+                    v-model="text"
+                    placeholder="Say something"
+                    rows="3"
+                    max-rows="6"
+                    class="__enter"
+                  ></b-form-textarea>
+                  <div class="__drop">
+                    <b-form-file
+                      v-model="file2"
+                      class="mt-3"
+                      plain
+                    ></b-form-file>
+                  </div>
+                </b-modal>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
@@ -36,6 +55,11 @@
 export default {
   data() {
     return {}
+  },
+  methods: {
+    clickbutton() {
+      this.$refs.button.click()
+    }
   }
 }
 </script>

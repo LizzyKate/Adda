@@ -86,11 +86,18 @@
   top: 8px;
   right: 10px;
 }
-.__mycustom button {
+.__mycustom button,
+#modal-1___BV_modal_footer_ .btn,
+.__drop input {
   border-radius: 23px;
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 12px;
+  border: none !important;
+}
+.__mycustom button:focus,
+#modal-1___BV_modal_footer_ .btn:focus {
+  box-shadow: none !important;
 }
 /* .__pic, .__vid{
     width: 250px;
@@ -222,7 +229,19 @@
 .__click {
   font-size: 1rem;
 }
-
+#modal-1___BV_modal_title_ {
+  font-family: 'Roboto' !important;
+  font-weight: bolder;
+}
+.__enter {
+  height: 200px !important;
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+.__enter:focus {
+  box-shadow: none;
+  border: 1px solid #6666667a;
+}
 @media screen and (max-width: 1200px) {
   .__space1 {
     margin-right: 10rem;

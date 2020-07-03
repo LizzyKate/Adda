@@ -43,11 +43,13 @@
   background-color: #80808036 !important;
   color: #80808036 !important;
 }
-.__mycustom button {
-  background-color: #dc4734;
-  color: #ffffff;
+.__mycustom button,
+#modal-1___BV_modal_footer_ .btn {
+  background-color: #dc4734 !important;
+  color: #ffffff !important;
 }
-.__mycustom button:hover {
+.__mycustom button:hover,
+#modal-1___BV_modal_footer_ .btn:hover {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
@@ -80,4 +82,10 @@
 }
 .__set i {
   color: #3333338c;
+}
+#modal-1___BV_modal_title_ {
+  color: #333333;
+}
+.__enter {
+  color: #6666667a;
 }
