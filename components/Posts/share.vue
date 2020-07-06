@@ -34,13 +34,7 @@
                     max-rows="6"
                     class="__enter"
                   ></b-form-textarea>
-                  <div class="__drop">
-                    <b-form-file
-                      v-model="file2"
-                      class="mt-3"
-                      plain
-                    ></b-form-file>
-                  </div>
+                  <FileUpload />
                 </b-modal>
               </div>
             </div>
@@ -52,9 +46,15 @@
 </template>
 
 <script>
+import FileUpload from './filesUpload'
 export default {
+  components: {
+    FileUpload
+  },
   data() {
-    return {}
+    return {
+      text: ''
+    }
   },
   methods: {
     clickbutton() {

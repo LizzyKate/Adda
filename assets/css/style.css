@@ -44,12 +44,14 @@
   color: #80808036 !important;
 }
 .__mycustom button,
-#modal-1___BV_modal_footer_ .btn {
+#modal-1___BV_modal_footer_ .btn,
+.__imgUpload {
   background-color: #dc4734 !important;
   color: #ffffff !important;
 }
 .__mycustom button:hover,
-#modal-1___BV_modal_footer_ .btn:hover {
+#modal-1___BV_modal_footer_ .btn:hover,
+.__imgUpload:hover {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
@@ -88,4 +90,6 @@
 }
 .__enter {
   color: #6666667a;
+}
+.__add {
 }

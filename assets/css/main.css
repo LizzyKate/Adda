@@ -88,20 +88,20 @@
 }
 .__mycustom button,
 #modal-1___BV_modal_footer_ .btn,
-.__drop input {
+.__drop input,
+.__imgUpload {
   border-radius: 23px;
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 12px;
   border: none !important;
+  padding: 7px 40px;
 }
 .__mycustom button:focus,
-#modal-1___BV_modal_footer_ .btn:focus {
+#modal-1___BV_modal_footer_ .btn:focus,
+.__imgUpload:focus {
   box-shadow: none !important;
 }
-/* .__pic, .__vid{
-    width: 250px;
-} */
 .__pic {
   display: flex;
   overflow: scroll;
@@ -241,6 +241,9 @@
 .__enter:focus {
   box-shadow: none;
   border: 1px solid #6666667a;
+}
+.__imgLink {
+  font-family: 'Roboto';
 }
 @media screen and (max-width: 1200px) {
   .__space1 {
