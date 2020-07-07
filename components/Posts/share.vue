@@ -25,7 +25,13 @@
                   Share
                 </b-button>
 
-                <b-modal id="modal-1" title="Share Your Mood" class="__mood">
+                <b-modal
+                  id="modal-1"
+                  title="Share Your Mood"
+                  class="__mood"
+                  ok-title="Post"
+                  ok-disabled
+                >
                   <b-form-textarea
                     id="textarea"
                     v-model="text"

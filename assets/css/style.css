@@ -15,7 +15,8 @@
 .__recent p,
 .__milli,
 .__many,
-.__click {
+.__click,
+.__commenter {
   color: #333333 !important;
 }
 .__spec:hover,
@@ -36,7 +37,8 @@
 .__dimbel p,
 .__your,
 .__sub i,
-.__new p {
+.__new p,
+.__replier i {
   color: #666666;
 }
 .__write {
@@ -90,6 +92,4 @@
 }
 .__enter {
   color: #6666667a;
-}
-.__add {
 }

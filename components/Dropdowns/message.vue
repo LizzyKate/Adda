@@ -69,37 +69,19 @@
 <script>
 export default {
   data() {
-    return {
-      tick: true,
-      message: [
-        {
-          image: 'profile-small-1.jpg',
-          name: 'Milli Raoulin',
-          text:
-            'Many desktop publishing packages and web page editors now use lorem ipsum as their default',
-          date: 25 + ' Apr, 2019'
-        },
-        {
-          image: 'profile-small-5.jpg',
-          name: 'Jhon Doe',
-          text:
-            'Many desktop publishing packages and web page editors now use lorem ipsum as their default',
-          date: 15 + ' Apr, 2019'
-        },
-        {
-          image: 'profile-small-6.jpg',
-          name: 'Jon Wileyam',
-          text:
-            'Many desktop publishing packages and web page editors now use lorem ipsum as their default',
-          date: 20 + ' Apr, 2019'
-        }
-      ]
+    return {}
+  },
+  computed: {
+    message() {
+      return this.$store.state.message.inbox
+    },
+    tick() {
+      return this.$store.state.message.tick
     }
   },
   methods: {
     mark() {
-      this.message = []
-      this.tick = false
+      this.$store.commit('message/mark')
     }
   }
 }

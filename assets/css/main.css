@@ -46,7 +46,8 @@
   cursor: pointer;
 }
 .__dimbel h6,
-.__dimbel h5 {
+.__dimbel h5,
+.__commenter {
   font-family: 'Roboto';
   font-weight: bolder;
 }
@@ -244,6 +245,14 @@
 }
 .__imgLink {
   font-family: 'Roboto';
+}
+.__view {
+  border: 1px solid #6666667a;
+  /* height: 200px; */
+  width: 100%;
+}
+.__comment {
+  font-size: 13px !important;
 }
 @media screen and (max-width: 1200px) {
   .__space1 {

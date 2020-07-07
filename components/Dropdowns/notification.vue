@@ -55,7 +55,7 @@
           class="d-flex flex-row bd-highlight mb-3 justify-content-between align-content-center"
         >
           <div class=" bd-highlight __group">
-            <p v-show="tick" class="mb-0">See all in messenger</p>
+            <p v-show="tick" class="mb-0">See all Notifications</p>
           </div>
           <div class=" bd-highlight __group">
             <p v-show="tick" class="mb-0" @click="mark()">Mark all as read</p>
@@ -69,34 +69,19 @@
 <script>
 export default {
   data() {
-    return {
-      tick: true,
-      notifications: [
-        {
-          image: 'profile-small-9.jpg',
-          names: ['Robert Faul,', ' William Jhon'],
-          text: 'and ' + 35 + '  other people reacted to your photo',
-          date: 25 + ' Apr, 2019'
-        },
-        {
-          image: 'profile-small-15.jpg',
-          names: ['Robert Mushkil,', ' Terry Jhon'],
-          text: 'and ' + 20 + ' other people reacted to your photo',
-          date: 20 + ' Apr, 2019'
-        },
-        {
-          image: 'profile-small-27.jpg',
-          names: ['Horijon Mbala,', ' Bashu Jhon'],
-          text: 'and ' + 55 + ' other people reacted to your post',
-          date: 15 + ' Apr, 2019'
-        }
-      ]
+    return {}
+  },
+  computed: {
+    notifications() {
+      return this.$store.state.notification.notify
+    },
+    tick() {
+      return this.$store.state.notification.tick
     }
   },
   methods: {
     mark() {
-      this.notifications = []
-      this.tick = false
+      this.$store.commit('notification/mark')
     }
   }
 }
