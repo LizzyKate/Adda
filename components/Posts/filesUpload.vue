@@ -82,10 +82,10 @@ export default {
       //   this.imageLink.splice(index, 1)
       // }
       this.imageLink.splice(i, 1)
-      console.log('I am clicked')
+      // console.log('I am clicked')
     },
     changeVideo(e) {
-      console.log(e)
+      // console.log(e)
       this.namesOfVideos = []
       if (e.target.files.length > 2) {
         alert('You can only upload a maximum of 2 videos')
@@ -98,19 +98,19 @@ export default {
     },
     change(e) {
       this.imageLink = []
-      console.log(e)
+      // console.log(e)
       const files = Object.values(e.target.files)
       files.forEach((element) => {
-        console.log(element)
+        // console.log(element)
         const reader = new FileReader()
 
         reader.readAsDataURL(element)
 
         reader.onload = (event) => {
           // called once readAsDataURL is completed
-          console.log(event.target.result)
+          // console.log(event.target.result)
           this.imageLink.push(event.target.result)
-          console.log(this.imageLink)
+          // console.log(this.imageLink)
         }
       })
     }

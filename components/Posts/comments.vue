@@ -24,7 +24,7 @@
                   </div>
                 </div>
                 <div class=" bd-highlight">
-                  <p class="mb-0 __timer">{{ type.time }}</p>
+                  <p class="mb-0">{{ type.time }}</p>
                 </div>
               </div>
             </div>
@@ -33,10 +33,13 @@
                 {{ type.reply }}
               </p>
             </div>
+            <div class="p-2 bd-highlight">
+              <p class="mb-0 __timer" @click="more(b)">{{ type.view }}</p>
+            </div>
           </div>
         </div>
       </div>
-      <Subcomment />
+      <Subcomment :class="{ hide: comment[b].hidden === false }" />
     </div>
   </div>
 </template>
@@ -54,25 +57,40 @@ export default {
           name: 'Jason Borne',
           time: 1 + ' year ago',
           reply:
-            'We are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post'
+            'We are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post',
+          view: 'View more replies',
+          hidden: false
         },
         {
           image: 'profile-small-5.jpg',
           name: 'Donald Trump',
           time: 1 + ' week ago',
           reply:
-            'we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel '
+            'we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel ',
+          view: 'View more replies',
+          hidden: false
         },
         {
           image: 'profile-small-6.jpg',
           name: 'Micheal Smith',
           time: 2 + ' days ago',
           reply:
-            'We are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post'
+            'We are working for the dance and sing songs. this car is very awesome for the youngster. please vote this car and like our post',
+          view: 'View more replies',
+          hidden: false
         }
       ]
+    }
+  },
+  methods: {
+    more(b) {
+      this.comment[b].hidden = !this.comment[b].hidden
     }
   }
 }
 </script>
-<style></style>
+<style scoped>
+.hide {
+  display: none;
+}
+</style>

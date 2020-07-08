@@ -6,7 +6,8 @@
 }
 .__diff,
 .__heart,
-.__send i {
+.__send i,
+.__shared {
   color: #dc4734 !important;
 }
 .__spec,

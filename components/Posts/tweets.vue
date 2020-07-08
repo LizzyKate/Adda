@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="d-flex flex-column bd-highlight mb-3">
-      <div v-for="(write, i) in post" :key="i" class="p-2 bd-highlight ">
+      <div
+        v-for="(write, i) in post"
+        id="target"
+        :key="i"
+        class="p-2 bd-highlight "
+      >
         <div class="__dimbel">
           <div class="d-flex flex-column bd-highlight mb-3">
             <div class="p-2 bd-highlight">
@@ -24,7 +29,14 @@
                   </div>
                 </div>
                 <div class="bd-highlight mr-3">
-                  <i class="fas fa-bars"></i>
+                  <!-- <i class="fas fa-bars"></i> -->
+                  <b-nav-item-dropdown :no-caret="false" :right="true">
+                    <!-- Using 'button-content' slot -->
+                    <template slot="button-content">
+                      <i class="py-0 fa fa-bars" style="color:black"></i>
+                    </template>
+                    <b-dropdown-item>Exit</b-dropdown-item>
+                  </b-nav-item-dropdown>
                 </div>
               </div>
             </div>
@@ -59,7 +71,11 @@
                         class="fas fa-heart __heart"
                         @click="change(i)"
                       ></i>
-                      <i v-else class="far fa-heart" @click="change(i)"></i>
+                      <i
+                        v-else
+                        class="far fa-heart __hearted"
+                        @click="change(i)"
+                      ></i>
                     </div>
                     <div class="bd-highlight ml-3">
                       <p class="mb-0 __like">{{ write.likes }}</p>
@@ -68,7 +84,7 @@
                 </div>
                 <div class=" bd-highlight">
                   <div class="d-flex flex-row bd-highlight">
-                    <div class=" bd-highlight">
+                    <div class=" bd-highlight __opinions" @click="more(i)">
                       <div
                         class="d-flex flex-row bd-highlight align-items-center"
                       >
@@ -85,7 +101,16 @@
                         class="d-flex flex-row bd-highlight align-items-center"
                       >
                         <div class=" bd-highlight">
-                          <i class="fas fa-share-alt"></i>
+                          <i
+                            v-if="write.shared"
+                            class="fas fa-share-alt __shared"
+                            @click="shared(i)"
+                          ></i>
+                          <i
+                            v-else
+                            class="fas fa-share-alt __opinions"
+                            @click="shared(i)"
+                          ></i>
                         </div>
                         <div class="bd-highlight">
                           <p class="mb-0 __like ml-2">{{ write.shares }}</p>
@@ -97,7 +122,7 @@
               </div>
             </div>
           </div>
-          <Comments />
+          <Comments :class="{ hide: post[i].hidden === false }" />
         </div>
       </div>
     </div>
@@ -114,24 +139,44 @@ export default {
     return {}
   },
   computed: {
-    post() {
+    post(i) {
       return this.$store.state.tweets.post
     }
   },
   methods: {
     change(i) {
       this.$store.commit('tweets/reaction', i)
+    },
+    more(i) {
+      this.$store.commit('tweets/more', i)
+    },
+    shared(i) {
+      this.$store.commit('tweets/given', i)
     }
   }
 }
 </script>
 
 <style>
-.width-100 {
+#target .width-100 {
   width: 100% !important;
 }
 
-.width-60 {
+#target .width-60 {
   max-width: 60%;
+}
+#target .hide {
+  display: none !important;
+}
+
+#target li {
+  list-style: none;
+}
+#target a {
+  color: black !important;
+  outline: none;
+}
+#target a::after {
+  content: none !important;
 }
 </style>
