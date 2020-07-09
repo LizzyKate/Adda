@@ -29,13 +29,46 @@
                   </div>
                 </div>
                 <div class="bd-highlight mr-3">
-                  <!-- <i class="fas fa-bars"></i> -->
                   <b-nav-item-dropdown :no-caret="false" :right="true">
-                    <!-- Using 'button-content' slot -->
                     <template slot="button-content">
-                      <i class="py-0 fa fa-bars" style="color:black"></i>
+                      <i class="py-0 fa fa-bars" style="color:#666666"></i>
                     </template>
-                    <b-dropdown-item>Exit</b-dropdown-item>
+                    <b-dropdown-item>
+                      <div
+                        class="d-flex flex-row bd-highlight justify-content-between"
+                      >
+                        <div class="bd-highlight">
+                          <i class="far fa-save"></i>
+                        </div>
+                        <div class="p-1 bd-highlight">
+                          <p class="mb-0">Save Post</p>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+                    <b-dropdown-item>
+                      <div
+                        class="d-flex flex-row bd-highlight justify-content-between"
+                      >
+                        <div class="bd-highlight">
+                          <i class="fas fa-ban"></i>
+                        </div>
+                        <div class="p-1 bd-highlight">
+                          <p class="mb-0">Hide Post</p>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
+                    <b-dropdown-item>
+                      <div
+                        class="d-flex flex-row bd-highlight justify-content-between"
+                      >
+                        <div class="bd-highlight">
+                          <i class="fas fa-times"></i>
+                        </div>
+                        <div class="p-1 bd-highlight">
+                          <p class="mb-0">Unfollow</p>
+                        </div>
+                      </div>
+                    </b-dropdown-item>
                   </b-nav-item-dropdown>
                 </div>
               </div>

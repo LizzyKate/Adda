@@ -47,13 +47,19 @@
 }
 .__dimbel h6,
 .__dimbel h5,
-.__commenter {
+.__commenter,
+.__look h6,
+.__jon {
   font-family: 'Roboto';
   font-weight: bolder;
 }
 .__dimbel p,
 .__your,
-.__our {
+.__our,
+.__mess,
+.__look p,
+.__chats p,
+.__respond p {
   font-family: 'Roboto';
   font-size: 12px;
   font-weight: lighter;
@@ -267,6 +273,44 @@
 .__hearted,
 .__shared {
   cursor: pointer;
+}
+.__increase {
+  width: 265px;
+  height: 200px;
+  overflow: scroll;
+  overflow-x: hidden;
+  bottom: 80px;
+  z-index: 3;
+  left: 32px;
+}
+.__sett i {
+  font-size: 25px;
+  cursor: pointer;
+}
+.__jon {
+  text-align: left;
+}
+.__decrease {
+  width: 265px;
+  height: 200px;
+  overflow: scroll;
+  overflow-x: hidden;
+  bottom: 80px;
+  z-index: 3;
+  right: 36px;
+}
+.__chats,
+.__respond {
+  border-radius: 25px;
+}
+.__chats p {
+  text-align: left;
+}
+.__respond {
+  align-self: flex-end;
+}
+.__respond p {
+  text-align: left;
 }
 @media screen and (max-width: 1200px) {
   .__space1 {

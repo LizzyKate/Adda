@@ -17,7 +17,8 @@
 .__milli,
 .__many,
 .__click,
-.__commenter {
+.__commenter,
+.__jon {
   color: #333333 !important;
 }
 .__spec:hover,
@@ -39,7 +40,8 @@
 .__your,
 .__sub i,
 .__new p,
-.__replier i {
+.__replier,
+.__mess {
   color: #666666;
 }
 .__write {
@@ -48,7 +50,9 @@
 }
 .__mycustom button,
 #modal-1___BV_modal_footer_ .btn,
-.__imgUpload {
+.__imgUpload,
+.__action,
+.__respond {
   background-color: #dc4734 !important;
   color: #ffffff !important;
 }
@@ -93,4 +97,10 @@
 }
 .__enter {
   color: #6666667a;
+}
+.__chats {
+  background-color: #6666667a;
+}
+.__respond {
+  background-color: #dc4734;
 }
