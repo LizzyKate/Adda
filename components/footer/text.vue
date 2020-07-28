@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="position-relative">
     <div class="bg-white __arrow mr-5 p-3">
       <div class="input-group">
         <input

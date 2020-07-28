@@ -27,7 +27,6 @@ export const state = () => ({
   ],
   hide: false
 })
-
 export const mutations = {
   show(state, payload) {
     if (state.People[payload].friend === false) {

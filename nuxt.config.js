@@ -33,6 +33,7 @@ export default {
   css: [
     '~/assets/css/main.css',
     '~assets/css/style.css',
+    '~assets/css/animation.css',
     '~/assets/fonts/css/all.css'
   ],
   /*

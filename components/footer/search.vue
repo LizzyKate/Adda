@@ -17,7 +17,11 @@
         </div>
       </div>
     </div>
-    <Friends v-show="display" />
+    <Friends
+      v-if="display"
+      :display="display"
+      :class="display ? 'slide-in-bottom' : 'slide-out-bottom'"
+    />
   </div>
 </template>
 <script>

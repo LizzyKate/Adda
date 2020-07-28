@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-white __decrease position-fixed">
+  <div v-if="hidden" class="bg-white __decrease position-fixed">
     <div class="d-flex flex-column bd-highlight mb-3">
       <div class=" bd-highlight">
         <div
-          class="d-flex flex-row bd-highlight __action justify-content-between align-items-center"
+          class="d-flex flex-row bd-highlight __actioned justify-content-between align-items-center"
         >
           <div class="p-2 bd-highlight">
             <div class=" bd-highlight position-relative">
               <img
-                src="/img/profile-small-6.jpg"
+                :src="'/img/' + chattingWith.image"
                 class="rounded-circle __profile"
                 alt=""
               />
@@ -16,37 +16,27 @@
             </div>
           </div>
           <div class="p-2 bd-highlight __look">
-            <h6>Robert Maloryan</h6>
+            <h6>{{ chattingWith.name }}</h6>
             <p v-if="active" class="mb-0">Active Now</p>
             <p v-else class="mb-0">Last seen {{ date }} at {{ time }}</p>
           </div>
           <div class="p-2 bd-highlight __sett">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times" @click="disappear()"></i>
           </div>
         </div>
       </div>
-      <div class="p-2 bd-highlight">
+      <div class="p-2 bd-highlight mt-5">
         <div
           v-for="(discuss, b) in conv"
           :key="b"
-          class="d-flex flex-column bd-highlight "
+          class="d-flex flex-column bd-highlight"
         >
           <div
-            v-for="(multiple, a) in discuss.you"
-            :key="a"
-            class="p-2 bd-highlight w-75 __chats mb-3"
+            class="p-2 bd-highlight w-75 mb-3"
+            :class="discuss.sender ? '__respond' : '__chats'"
           >
             <p class="mb-0 px-2">
-              {{ multiple }}
-            </p>
-          </div>
-          <div
-            v-for="(response, a) in discuss.me"
-            :key="a"
-            class="p-2 bd-highlight w-75 __respond mb-3"
-          >
-            <p class="mb-0 px-2">
-              {{ response }}
+              {{ discuss.message }}
             </p>
           </div>
         </div>
@@ -56,7 +46,15 @@
 </template>
 <script>
 export default {
+  data() {
+    return {}
+  },
   computed: {
+    chattingWith() {
+      return this.$store.state.friend.People[
+        this.$store.state.chat.currentChatWith
+      ]
+    },
     conv() {
       return this.$store.state.chat.conv
     },
@@ -68,6 +66,14 @@ export default {
     },
     active() {
       return this.$store.state.chat.active
+    },
+    hidden() {
+      return this.$store.state.chat.remove
+    }
+  },
+  methods: {
+    disappear() {
+      this.$store.commit('chat/hide')
     }
   }
 }

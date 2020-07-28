@@ -332,12 +332,18 @@
 
 .__increase {
   width: 265px;
-  height: 200px;
+  min-height: 200px;
+  max-height: 500px;
   overflow: scroll;
   overflow-x: hidden;
   bottom: 80px;
   z-index: 3;
   left: 32px;
+  scroll-padding: 0;
+}
+
+.__increase::-webkit-scrollbar {
+  display: none !important;
 }
 
 .__sett i {
@@ -351,12 +357,18 @@
 
 .__decrease {
   width: 265px;
-  height: 200px;
+  min-height: 200px;
+  max-height: 390px;
   overflow: scroll;
   overflow-x: hidden;
   bottom: 80px;
   z-index: 3;
   right: 36px;
+  scroll-padding: 0;
+}
+
+.__decrease::-webkit-scrollbar {
+  display: none !important;
 }
 
 .__chats,
