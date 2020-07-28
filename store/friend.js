@@ -24,7 +24,8 @@ export const state = () => ({
       bio: 'Many Desktop Publishing',
       friend: false
     }
-  ]
+  ],
+  hide: false
 })
 
 export const mutations = {
@@ -34,5 +35,11 @@ export const mutations = {
     } else {
       state.People[payload].friend = true
     }
+  },
+  hidden(state, payload) {
+    state.hide = true
+  },
+  close(state, payload) {
+    state.hide = false
   }
 }

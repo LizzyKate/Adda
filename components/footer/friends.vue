@@ -1,7 +1,7 @@
 <template>
-  <div v-show="close" class="bg-white __increase position-fixed">
-    <!-- <div class="d-flex flex-column bd-highlight mb-3">
-      <div class=" bd-highlight">
+  <div class="bg-white __increase position-fixed">
+    <div class="d-flex flex-column bd-highlight mb-3">
+      <div class="bd-highlight">
         <div
           class="d-flex flex-row bd-highlight __action justify-content-between align-items-center"
         >
@@ -11,103 +11,61 @@
           <div class="p-2 bd-highlight __look">
             <h6 class="mb-0">Search Friends</h6>
           </div>
-          <div class="p-2 bd-highlight __sett" @click="closed()">
+          <div class="p-2 bd-highlight __sett" @click="close()">
             <i class="fas fa-times"></i>
           </div>
         </div>
       </div>
       <div class="p-2 bd-highlight">
-        <div class="d-flex flex-column bd-highlight ">
-          <div class="p-2 bd-highlight">
+        <div class="d-flex flex-column bd-highlight">
+          <div v-for="(friends, i) in search" :key="i" class="p-2 bd-highlight">
             <div class="d-flex flex-row bd-highlight mb-3">
-              <div class=" bd-highlight">
-                <div class=" bd-highlight position-relative">
+              <div class="bd-highlight">
+                <div class="bd-highlight position-relative">
                   <img
-                    src="/img/profile-small-1.jpg"
+                    :src="`/img/${friends.image}`"
                     class="rounded-circle __profile"
-                    alt=""
+                    alt
                   />
                   <div class="rounded-circle position-absolute __online"></div>
                 </div>
               </div>
-              <div class=" bd-highlight ml-3">
-                <h6 class="__jon">Jon Wilem</h6>
-                <p class="mb-0 __mess">Many Desktop Publishing</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-2 bd-highlight">
-            <div class="d-flex flex-row bd-highlight mb-3">
-              <div class=" bd-highlight">
-                <div class=" bd-highlight position-relative">
-                  <img
-                    src="/img/profile-small-1.jpg"
-                    class="rounded-circle __profile"
-                    alt=""
-                  />
-                  <div class="rounded-circle position-absolute __online"></div>
+              <div class="bd-highlight">
+                <h6 class="__jon ml-3">{{ friends.name }}</h6>
+                <p v-if="friends.friend" class="mb-0 __mess ml-3">
+                  {{ friends.bio }}
+                </p>
+                <div v-if="!friends.friend">
+                  <button class="__add" @click="add(i)">
+                    Add Friend
+                  </button>
                 </div>
-              </div>
-              <div class=" bd-highlight ml-3">
-                <h6 class="__jon">Jon Wilem</h6>
-                <p class="mb-0 __mess">Add Friend</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-2 bd-highlight">
-            <div class="d-flex flex-row bd-highlight mb-3">
-              <div class=" bd-highlight">
-                <div class=" bd-highlight position-relative">
-                  <img
-                    src="/img/profile-small-1.jpg"
-                    class="rounded-circle __profile"
-                    alt=""
-                  />
-                  <div class="rounded-circle position-absolute __online"></div>
-                </div>
-              </div>
-              <div class=" bd-highlight ml-3">
-                <h6 class="__jon">Jon Wilem</h6>
-                <p class="mb-0 __mess">Many Desktop Publishing</p>
-              </div>
-            </div>
-          </div>
-          <div class="p-2 bd-highlight">
-            <div class="d-flex flex-row bd-highlight mb-3">
-              <div class=" bd-highlight">
-                <div class=" bd-highlight position-relative">
-                  <img
-                    src="/img/profile-small-1.jpg"
-                    class="rounded-circle __profile"
-                    alt=""
-                  />
-                  <div class="rounded-circle position-absolute __online"></div>
-                </div>
-              </div>
-              <div class=" bd-highlight ml-3">
-                <h6 class="__jon">Jon Wilem</h6>
-                <p class="mb-0 __mess">Add Friend</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {
-      close: false
+    return {}
+  },
+  computed: {
+    search() {
+      return this.$store.state.friend.People
     }
   },
-  // methods: {
-  //   closed() {
-  //     this.hide = !this.hide
-  //   }
-  // }
-  watch: {}
+  methods: {
+    add(i) {
+      this.$store.commit('friend/show', i)
+    },
+    close() {
+      this.$store.commit('friend/close')
+    }
+  }
 }
 </script>
 <style scoped></style>

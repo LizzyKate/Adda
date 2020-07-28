@@ -16,8 +16,9 @@
             </div>
           </div>
           <div class="p-2 bd-highlight __look">
-            <h6 class="mb-0">Robert Maloryan</h6>
-            <p class="mb-0">Active Now</p>
+            <h6>Robert Maloryan</h6>
+            <p v-if="active" class="mb-0">Active Now</p>
+            <p v-else class="mb-0">Last seen {{ date }} at {{ time }}</p>
           </div>
           <div class="p-2 bd-highlight __sett">
             <i class="fas fa-times"></i>
@@ -25,33 +26,27 @@
         </div>
       </div>
       <div class="p-2 bd-highlight">
-        <div class="d-flex flex-column bd-highlight ">
-          <div class="p-2 bd-highlight w-75 __chats mb-3">
+        <div
+          v-for="(discuss, b) in conv"
+          :key="b"
+          class="d-flex flex-column bd-highlight "
+        >
+          <div
+            v-for="(multiple, a) in discuss.you"
+            :key="a"
+            class="p-2 bd-highlight w-75 __chats mb-3"
+          >
             <p class="mb-0 px-2">
-              Many desktop publishing packages and web page editors now use
-              Lorem Ipsum as their default model text
+              {{ multiple }}
             </p>
           </div>
-          <div class="p-2 bd-highlight w-75 __respond mb-3">
+          <div
+            v-for="(response, a) in discuss.me"
+            :key="a"
+            class="p-2 bd-highlight w-75 __respond mb-3"
+          >
             <p class="mb-0 px-2">
-              Many desktop publishing packages and web page editors
-            </p>
-          </div>
-          <div class="p-2 bd-highlight w-75 __chats mb-3">
-            <p class="mb-0 px-2">
-              Many desktop publishing packages and web page editors now use
-              Lorem Ipsum as their default model text
-            </p>
-          </div>
-          <div class="p-2 bd-highlight w-75 __chats mb-3">
-            <p class="mb-0 px-2">
-              Many desktop publishing packages and web page editors now use
-              Lorem Ipsum as their default model text
-            </p>
-          </div>
-          <div class="p-2 bd-highlight w-75 __respond mb-3">
-            <p class="mb-0 px-2">
-              Many desktop publishing packages and web page editors
+              {{ response }}
             </p>
           </div>
         </div>
@@ -60,6 +55,21 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  computed: {
+    conv() {
+      return this.$store.state.chat.conv
+    },
+    date() {
+      return this.$store.state.chat.date
+    },
+    time() {
+      return this.$store.state.chat.time
+    },
+    active() {
+      return this.$store.state.chat.active
+    }
+  }
+}
 </script>
 <style scoped></style>
