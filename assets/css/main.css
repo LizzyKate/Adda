@@ -2,15 +2,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .__stop {
   padding-top: 6rem;
 }
+
 .__space {
   padding: 1rem 3rem 1rem 3rem;
   position: fixed;
   top: 0;
   z-index: 10;
 }
+
 .__diff,
 .__spec {
   font-family: 'Roboto';
@@ -18,33 +21,41 @@
   font-weight: bolder;
   cursor: pointer;
 }
+
 .__shift {
   margin-left: 10rem;
 }
+
 .__parent {
   font-family: 'Roboto';
   font-size: 12px;
 }
+
 .__parent:focus {
   box-shadow: none !important;
 }
+
 .__profile {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
+
 .__ban {
   height: 140px;
 }
+
 .__adjust {
   top: 90px;
   left: 85px;
 }
+
 .__profiling {
   width: 70px;
   height: 70px;
   cursor: pointer;
 }
+
 .__dimbel h6,
 .__dimbel h5,
 .__commenter,
@@ -53,6 +64,7 @@
   font-family: 'Roboto';
   font-weight: bolder;
 }
+
 .__dimbel p,
 .__your,
 .__our,
@@ -64,11 +76,13 @@
   font-size: 12px;
   font-weight: lighter;
 }
+
 .__line {
   width: 29px;
   height: 1px;
   border: 1px solid #dc4734;
 }
+
 .__join,
 .__attach,
 .__like {
@@ -76,27 +90,33 @@
   font-weight: bolder !important;
   font-size: 15px !important;
 }
+
 .__evenly {
   justify-content: space-evenly;
 }
+
 .__write {
   font-family: 'Roboto';
   font-size: 12px;
 }
+
 .__write:focus {
   outline: none !important;
   z-index: 0 !important;
   box-shadow: none !important;
   border: none !important;
 }
+
 .__mycustom {
   top: 8px;
   right: 10px;
 }
+
 .__mycustom button,
 #modal-1___BV_modal_footer_ .btn,
 .__drop input,
-.__imgUpload {
+.__imgUpload,
+.__add {
   border-radius: 23px;
   font-family: 'Roboto';
   font-weight: bold;
@@ -104,11 +124,13 @@
   border: none !important;
   padding: 7px 40px;
 }
+
 .__mycustom button:focus,
 #modal-1___BV_modal_footer_ .btn:focus,
 .__imgUpload:focus {
   box-shadow: none !important;
 }
+
 .__pic {
   display: flex;
   overflow: scroll;
@@ -127,41 +149,51 @@
   height: 200px;
   object-fit: contain;
 }
+
 .__buzz {
   margin-left: 3rem;
 }
+
 .__search {
   height: 70px;
   box-shadow: 0px 3px 6px #00000029;
 }
+
 .__your:focus {
   box-shadow: none !important;
 }
+
 .__arrow {
   height: 70px;
   box-shadow: 0px 3px 6px #00000029;
 }
+
 .__shake {
   margin-right: auto;
   margin-left: auto;
 }
+
 .__our:focus {
   margin-top: -10px !important;
   box-shadow: none !important;
 }
+
 .__less {
   height: 30px;
   width: 30px;
   border: 1px solid #333333ba;
   cursor: pointer;
 }
+
 .__flow {
   overflow: scroll;
   scroll-padding: 0;
 }
+
 .__flow::-webkit-scrollbar {
   display: none !important;
 }
+
 .__online {
   height: 10px;
   width: 10px;
@@ -169,6 +201,7 @@
   top: 30px;
   left: 30px;
 }
+
 .__up {
   bottom: 90px;
   right: 40px;
@@ -176,9 +209,11 @@
   width: 55px;
   cursor: pointer;
 }
+
 .__up i {
   font-size: 25px;
 }
+
 .__message {
   top: 72px;
   left: 180px;
@@ -188,42 +223,51 @@
   box-shadow: 0px 3px 6px #00000029;
   overflow: scroll;
 }
+
 .__through {
   width: 100%;
   height: 1px;
   border: 1px solid #4444442e;
 }
+
 .__recent p {
   font-family: 'Roboto';
   font-size: 14px;
   font-weight: bolder;
 }
+
 .__group {
   cursor: pointer;
 }
+
 .__group:hover {
   display: block;
   border-bottom: 1px solid #dc4734;
 }
+
 .__group p,
 .__date p {
   font-size: 12px;
   font-family: 'Roboto';
 }
+
 .__milli,
 .__click {
   font-family: 'Roboto';
   width: 32%;
   font-weight: bolder;
 }
+
 .__milli:hover {
   border-bottom: 1px solid #dc4734;
 }
+
 .__many {
   font-size: 13px;
   font-family: 'Roboto';
   font-weight: lighter;
 }
+
 .__notify {
   top: 72px;
   left: 360px;
@@ -233,47 +277,59 @@
   box-shadow: 0px 3px 6px #00000029;
   overflow: scroll;
 }
+
 .__click {
   font-size: 1rem;
 }
+
 #modal-1___BV_modal_title_ {
   font-family: 'Roboto' !important;
   font-weight: bolder;
 }
+
 .__enter {
   height: 200px !important;
   font-family: 'Roboto';
   font-size: 13px;
 }
+
 .__enter:focus {
   box-shadow: none;
   border: 1px solid #6666667a;
 }
+
 .__imgLink {
   font-family: 'Roboto';
 }
+
 .__view {
   border: 1px solid #6666667a;
   width: 100%;
 }
+
 .__comment {
   font-size: 13px !important;
 }
+
 .__timer {
   cursor: pointer;
 }
+
 .__replier i {
   cursor: pointer;
 }
+
 .__commenter {
   cursor: pointer;
 }
+
 .__opinions,
 .__heart,
 .__hearted,
 .__shared {
   cursor: pointer;
 }
+
 .__increase {
   width: 265px;
   height: 200px;
@@ -283,13 +339,16 @@
   z-index: 3;
   left: 32px;
 }
+
 .__sett i {
   font-size: 25px;
   cursor: pointer;
 }
+
 .__jon {
   text-align: left;
 }
+
 .__decrease {
   width: 265px;
   height: 200px;
@@ -299,29 +358,41 @@
   z-index: 3;
   right: 36px;
 }
+
 .__chats,
 .__respond {
   border-radius: 25px;
 }
+
 .__chats p {
   text-align: left;
 }
+
 .__respond {
   align-self: flex-end;
 }
+
 .__respond p {
   text-align: left;
 }
+
+.__add {
+  padding: 3px 15px !important;
+}
+
 @media screen and (max-width: 1200px) {
   .__space1 {
     margin-right: 10rem;
   }
+
   .__ban {
     height: 120px;
   }
+
   .__adjust {
     left: 70px;
   }
+
   .__push {
     flex-basis: 0;
     flex-grow: 1;
@@ -330,6 +401,7 @@
     position: relative;
     width: 100%;
   }
+
   .__shake {
     margin-left: 1rem;
     margin-right: 1rem;

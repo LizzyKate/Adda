@@ -1,15 +1,18 @@
 .__space {
   background-color: #ffffffc2 !important;
 }
+
 .__dimbel {
   background-color: #ffffff !important;
 }
+
 .__diff,
 .__heart,
 .__send i,
 .__shared {
   color: #dc4734 !important;
 }
+
 .__spec,
 .__dimbel h6,
 .__join,
@@ -21,21 +24,26 @@
 .__jon {
   color: #333333 !important;
 }
+
 .__spec:hover,
 .__group p:hover,
 .__milli:hover {
   color: #dc4734 !important;
 }
+
 .__parent {
   background-color: transparent !important;
   color: #000000;
 }
+
 .__divide {
   background-color: #44444438;
 }
+
 .__ban {
   background-color: #444444b8;
 }
+
 .__dimbel p,
 .__your,
 .__sub i,
@@ -44,63 +52,80 @@
 .__mess {
   color: #666666;
 }
+
 .__write {
   background-color: #80808036 !important;
   color: #80808036 !important;
 }
+
 .__mycustom button,
 #modal-1___BV_modal_footer_ .btn,
 .__imgUpload,
 .__action,
-.__respond {
+.__respond,
+.__add {
   background-color: #dc4734 !important;
   color: #ffffff !important;
 }
+
 .__mycustom button:hover,
 #modal-1___BV_modal_footer_ .btn:hover,
 .__imgUpload:hover {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+
 .__attach {
   color: #444444 !important;
 }
+
 .__like {
   color: #444444b3;
 }
+
 .__sub,
 .__send {
   background-color: transparent !important;
 }
+
 .__less i {
   color: #333333ba;
 }
+
 .__up {
   background-color: #dc4734;
 }
+
 .__up i {
   color: #f0f8ffb5;
 }
+
 .__message,
 .__notify {
   background-color: #ffffff;
 }
+
 .__group p,
 .__date p {
   color: #444444c7;
 }
+
 .__set i {
   color: #3333338c;
 }
+
 #modal-1___BV_modal_title_ {
   color: #333333;
 }
+
 .__enter {
   color: #6666667a;
 }
+
 .__chats {
   background-color: #6666667a;
 }
+
 .__respond {
   background-color: #dc4734;
 }
