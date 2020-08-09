@@ -60,7 +60,8 @@
 .__dimbel h5,
 .__commenter,
 .__look h6,
-.__jon {
+.__jon,
+.__connect {
   font-family: 'Roboto';
   font-weight: bolder;
 }
@@ -391,6 +392,67 @@
 .__add {
   padding: 3px 15px !important;
 }
+
+.__email {
+  border: 1px solid #ffffff80;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+
+.__email:focus,
+.__info:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.__submit {
+  font-size: 13px;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+
+.__submit:focus,
+.__account:focus {
+  outline: none;
+}
+
+.__submit:hover {
+  background-color: black;
+}
+
+.__curtain {
+  background-image: url("/img/adda-timeline.jpg");
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.__intro,
+.__create,
+.__newComer h3,
+.__accept {
+  font-family: 'Roboto';
+}
+
+.fill {
+  box-shadow: 0px 3px 6px #00000029
+}
+
+.__info {
+  border: 1px solid #0000006e;
+  font-size: 13px;
+  font-family: 'Roboto';
+}
+
+.__info:focus {
+  border: 1px solid #0000006e;
+}
+
+.__select {
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+
 
 @media screen and (max-width: 1200px) {
   .__space1 {

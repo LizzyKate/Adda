@@ -9,7 +9,10 @@
 .__diff,
 .__heart,
 .__send i,
-.__shared {
+.__shared,
+.__submit,
+.__create,
+.__terms {
   color: #dc4734 !important;
 }
 
@@ -21,7 +24,9 @@
 .__many,
 .__click,
 .__commenter,
-.__jon {
+.__jon,
+.__connect,
+.__accept {
   color: #333333 !important;
 }
 
@@ -92,7 +97,8 @@
   color: #333333ba;
 }
 
-.__up {
+.__up,
+.__newComer {
   background-color: #dc4734;
 }
 
@@ -126,6 +132,30 @@
   background-color: #6666667a;
 }
 
-.__respond {
+.__respond,
+.__log,
+.__account {
   background-color: #dc4734;
+}
+
+.__email {
+  background-color: transparent;
+  color: #ffffff80 !important;
+}
+
+.__email::placeholder {
+  color: #ffffff80;
+}
+
+.__submit {
+  background-color: white;
+}
+
+.__info,
+.__info::placeholder {
+  color: #0000006e;
+}
+
+.__select {
+  color: #444444;
 }
